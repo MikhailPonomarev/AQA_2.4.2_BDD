@@ -3,12 +3,15 @@ package ru.netology.web.page;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import lombok.val;
+import ru.alfabank.alfatest.cucumber.annotations.Name;
+import ru.alfabank.alfatest.cucumber.api.AkitaPage;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class DashboardPage {
+@Name("Дашборд")
+public class DashboardPage extends AkitaPage {
     private SelenideElement heading = $("[data-test-id='dashboard']");
     private ElementsCollection cards = $$(".list__item");
     private ElementsCollection cardButtons = $$("[data-test-id='action-deposit']");

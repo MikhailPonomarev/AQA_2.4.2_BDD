@@ -13,6 +13,8 @@ import ru.netology.web.page.VerificationPage;
 
 import static com.codeborne.selenide.Selenide.*;
 
+//TODO: заменить CI на Github Actions
+
 class MoneyTransferTest {
     private final String firstAccount = "5559 0000 0000 0001";
     private final String secondAccount = "5559 0000 0000 0002";

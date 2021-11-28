@@ -1,11 +1,14 @@
 package ru.netology.web.page;
 
 import com.codeborne.selenide.SelenideElement;
+import ru.alfabank.alfatest.cucumber.annotations.Name;
+import ru.alfabank.alfatest.cucumber.api.AkitaPage;
 import ru.netology.web.data.DataHelper;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class LoginPage {
+@Name("Страница входа")
+public class LoginPage extends AkitaPage {
     private SelenideElement loginField = $("[data-test-id=login] input");
     private SelenideElement passwordField = $("[data-test-id=password] input");
     private SelenideElement loginButton = $("[data-test-id=action-login]");

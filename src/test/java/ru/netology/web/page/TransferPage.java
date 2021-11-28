@@ -2,12 +2,15 @@ package ru.netology.web.page;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.Keys;
+import ru.alfabank.alfatest.cucumber.annotations.Name;
+import ru.alfabank.alfatest.cucumber.api.AkitaPage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
-public class TransferPage {
+@Name("Страница перевода")
+public class TransferPage extends AkitaPage {
     private SelenideElement amountField = $("[data-test-id='amount'] input");
     private SelenideElement fromAccountField = $("[data-test-id='from'] input");
     private SelenideElement transferButton = $("[data-test-id='action-transfer']");
